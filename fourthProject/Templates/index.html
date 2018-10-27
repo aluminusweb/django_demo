@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'basic.html' %}
+
+{%block body_block %}
+  <h1>Welcome to index Page</h1>
+  {{ name|cut:"my" }}
+  {{ date| add:"99" }}
+  <h1>this is index.html showing..</h1>
+{%endblock%}
+<!--<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Django index page</title>
+  </head>
+  <body>
+    <h1>Index Page</h1>
+    <a href="{% url 'fourthApp:other' %}">link to other page</a>
+    <a href="{% url 'fourthApp:relative' %}">link to relative page</a>
+  </body>
+</html> -->

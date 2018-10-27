@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>django Assignment</title>
+  </head>
+  <body>
+    <h1>Welcome to user info</h1>
+    {%if user_info %}
+      {%for i in user_info%}
+        <p>{{forloop.counter}}. User Info: </p>
+        <ul>
+          <li>first name : {{i.first_name}}</li>
+          <li>last name :  {{i.last_name}} </li>
+          <li>last name :  {{i.email}} </li>
+        </ul>
+
+      {% endfor %}
+    {% else %}
+      <p>No record found</p>
+    {% endif %}
+  </body>
+</html>
